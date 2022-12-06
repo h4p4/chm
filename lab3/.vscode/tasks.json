@@ -1,0 +1,53 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "Build(Windows) g++",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${cwd}\\src\\*.cpp",
+                "-o",
+                "${cwd}\\bin\\debug\\${workspaceFolderBasename}.exe",
+                "-I",
+                "${cwd}\\include"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+            },
+            "detail": "Задача создана отладчиком."
+        },
+        {
+            "type": "cppbuild",            
+            "label": "Build(Linux) g++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${cwd}/src/*.cpp",
+                "-o",
+                "${cwd}/bin/debug/${workspaceFolderBasename}.out",
+                "-I",
+                "${cwd}/include"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+            },
+            "detail": "Задача создана отладчиком."
+        }
+    ],
+    "version": "2.0.0"
+}

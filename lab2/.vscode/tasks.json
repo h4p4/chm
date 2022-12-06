@@ -7,9 +7,9 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${cwd}\\bin\\debug\\${workspaceFolderBasename}.exe",
-                "-o",
                 "${cwd}\\src\\*.cpp",
+                "-o",
+                "${cwd}\\bin\\debug\\${workspaceFolderBasename}.exe",
                 "-I",
                 "${cwd}\\include"
             ],
@@ -38,7 +38,7 @@
                 "${cwd}/include"
             ],
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "${workspaceFolder}"
             },
             "problemMatcher": [
                 "$gcc"
