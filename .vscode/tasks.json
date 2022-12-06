@@ -2,13 +2,13 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: g++.exe сборка активного файла",
+            "label": "Build(Windows) g++",
             "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "-o",
                 "${cwd}\\bin\\debug\\${workspaceFolderBasename}.exe",
+                "-o",
                 "${cwd}\\src\\*.cpp",
                 "-I",
                 "${cwd}\\include"
@@ -21,7 +21,30 @@
             ],
             "group": {
                 "kind": "build",
-                "isDefault": true
+            },
+            "detail": "Задача создана отладчиком."
+        },
+        {
+            "type": "cppbuild",            
+            "label": "Build(Linux) g++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${cwd}/src/*.cpp",
+                "-o",
+                "${cwd}/bin/debug/${workspaceFolderBasename}.out",
+                "-I",
+                "${cwd}/include"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
             },
             "detail": "Задача создана отладчиком."
         }
