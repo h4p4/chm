@@ -6,7 +6,7 @@
     "configurations": [
 
         {
-            "preLaunchTask": "C/C++: g++.exe сборка активного файла",
+            "preLaunchTask": "Build(Windows) g++",
             "name": "Build and debug (Terminal)",
             "type": "cppdbg",
             "request": "launch",
@@ -33,7 +33,7 @@
             ]
         },
         {
-            "preLaunchTask": "C/C++: g++.exe сборка активного файла",
+            "preLaunchTask": "Build(Windows) g++",
             "name": "Build and run (Console)",
             "type": "cppvsdbg",
             "request": "launch",
