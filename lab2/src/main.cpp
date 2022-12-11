@@ -1,6 +1,8 @@
 
 #include <iostream>
 #include <cmath>
+#include <ctime>
+#include <cstdlib>
 #include <Equations/equations.hpp>
 int main()
 {
@@ -16,7 +18,10 @@ int main()
 	};
 
 	float a = 0, b = 5;
-	float sp = 4;
+	std::srand(std::time(nullptr));
+	int sp = (int)a + rand() % ((int)b - (int)a + 1);
+
+	std::cout << sp << "\n";
 
 	float xDichotomy = dichotomy(f, a, b);
 	float xNewton = newton(f, fd, sp);
